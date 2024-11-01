@@ -1,0 +1,251 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123"
+    },
+    {
+      "id": "23ae",
+      "firstName": "Achintya",
+      "lastName": "Maiti",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40",
+      "confirmPassword": "Achintya@40"
+    },
+    {
+      "id": "683a",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "8555",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "2523",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "5ad8",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "b65d",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "5f1e",
+      "firstName": "Sandip",
+      "lastName": "Ghosh",
+      "email": "sandipghosh3@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789"
+    },
+    {
+      "id": "23a8",
+      "email": "sandipghosh3@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "4ae1",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "e6d0",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "b5c9",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "a964",
+      "firstName": "Sayantika ",
+      "lastName": "Dasgupta",
+      "email": "sdasgupta432@gmail.com",
+      "password": "Sdasgupta@432",
+      "confirmPassword": "Sdasgupta@432"
+    },
+    {
+      "id": "56d8",
+      "email": "sdasgupta432@gmail.com",
+      "password": "Sdasgupta@432"
+    },
+    {
+      "id": "506c",
+      "firstName": "Sandip",
+      "lastName": "Ghosh",
+      "email": "sghosh544@gmail.com",
+      "password": "Sghosh@544",
+      "confirmPassword": "Sghosh@544"
+    },
+    {
+      "id": "2395",
+      "email": "sghosh544@gmail.com",
+      "password": "Sghosh@544"
+    },
+    {
+      "id": "084e",
+      "firstName": "Parthasarathi",
+      "lastName": "Mitra",
+      "email": "ps@123gmail.com",
+      "password": "ps@123",
+      "confirmPassword": "ps@123"
+    },
+    {
+      "id": "4f0a",
+      "email": "ps@123gmail.com",
+      "password": "ps@123"
+    },
+    {
+      "id": "8cb9",
+      "firstName": "Koushik",
+      "lastName": "Sarkar",
+      "email": "ksarkar321@gmail.com",
+      "password": "Ksarkar@321",
+      "confirmPassword": "Ksarkar@321"
+    },
+    {
+      "id": "d2f2",
+      "firstName": "Achintya",
+      "lastName": "Maiti",
+      "email": "achintyamaiti90@gmail.com",
+      "password": "Achintya@2001",
+      "confirmPassword": "Achintya@2001"
+    },
+    {
+      "id": "13ba",
+      "firstName": "Pratik",
+      "lastName": "Sannyal",
+      "email": "achintyamaiti2001@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789"
+    },
+    {
+      "id": "6fcf",
+      "email": "achintyamaiti2001@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "09ff",
+      "email": "achintyamaiti2001@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "bb2f",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "5e96",
+      "busNumber": "25",
+      "route": "Howrah-Barasat",
+      "bookingDate": "2024-10-20",
+      "seatsBooked": "4",
+      "totalPrice": "120",
+      "userId": 1
+    },
+    {
+      "id": "361b",
+      "busNumber": "215A/1",
+      "route": "Howrah-Techno Clg",
+      "bookingDate": "2024-10-04",
+      "seatsBooked": "2",
+      "totalPrice": "40",
+      "userId": 1
+    },
+    {
+      "id": "5358",
+      "busNumber": "S12",
+      "route": "Bidhanangar- Karunamoyee",
+      "bookingDate": "2025-01-12",
+      "seatsBooked": "3",
+      "totalPrice": "60",
+      "userId": 1
+    },
+    {
+      "id": "ba52",
+      "busNumber": "44A",
+      "route": "Sialdah - Howrah",
+      "bookingDate": "2024-10-10",
+      "seatsBooked": "4",
+      "totalPrice": "100",
+      "userId": 1
+    },
+    {
+      "id": "e5ac",
+      "busNumber": "215A",
+      "route": "bid-kar",
+      "bookingDate": "2024-10-19",
+      "seatsBooked": "4",
+      "totalPrice": "80",
+      "userId": 1
+    },
+    {
+      "id": "8dfa",
+      "busNumber": "65",
+      "route": "Howrah-Barasat",
+      "bookingDate": "2025-12-25",
+      "seatsBooked": "12",
+      "totalPrice": "350",
+      "userId": 1
+    },
+    {
+      "id": "446e",
+      "busNumber": "44A",
+      "route": "Sialdah - Howrah",
+      "bookingDate": "2024-12-12",
+      "seatsBooked": "3",
+      "totalPrice": "450",
+      "userId": 1
+    },
+    {
+      "id": "637a",
+      "busNumber": "44A",
+      "route": "Howrah-Techno Clg",
+      "bookingDate": "2024-11-13",
+      "seatsBooked": "2",
+      "totalPrice": "240",
+      "userId": 1
+    },
+    {
+      "id": "",
+      "busNumber": "44A",
+      "route": "Sialdah - Howrah",
+      "bookingDate": "2024-12-13",
+      "seatsBooked": "2",
+      "totalPrice": "250",
+      "userId": null
+    },
+    {
+      "id": "",
+      "busNumber": "512AS",
+      "route": "ManipurByMG",
+      "bookingDate": "2024-12-12",
+      "seatsBooked": "2",
+      "totalPrice": "150",
+      "userId": null
+    },
+    {
+      "id": "6925",
+      "busNumber": "44A",
+      "route": "Sialdah - Howrah",
+      "bookingDate": "2025-12-13",
+      "seatsBooked": "1",
+      "totalPrice": "60",
+      "userId": 1
+    }
+  ]
+}
