@@ -15,6 +15,7 @@ const Login = lazy(() => import('../component/users/Login'));
 const RegistrationPage = lazy(() => import('../component/users/Registration'));
 const DashboardPage = lazy(() => import('../component/users/Dashboard'));
 const ViewReservations = lazy(() => import('../component/buses/ViewReservation'));
+const ViewDescription = lazy(() => import('../component/buses/ViewDescription'));
 const BookBus = lazy(() => import('../component/buses/BusBooking'));
 const PaymentConfirmation = lazy(() => import('../component/payment/PaymentConfirmation'));
 const UserProfile = lazy(() => import('../component/users/UserProfile'));
@@ -41,6 +42,7 @@ const Routing = () => {
                         <Route path="/register" element={<RegistrationPage />} />
                         <Route path="/dashboard" element={<DashboardPage />} />
                         <Route path="/view-reservations" element={<ViewReservations />} />
+                        <Route path="/view-reservations/:id" element={<ViewDescription />} />
                         <Route path="/book-bus" element={<BookBus />} />
                         <Route path="/pay-processing" element={<PaymentConfirmation />} />
                         <Route path="/profile" element={<UserProfile />} />

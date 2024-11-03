@@ -3,10 +3,11 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useUserContext } from '../users/UserContext'; // Import the User Context
+// import { UserProvider } from '../context/UserContext'; // Import the User Context
+import { useUserContext } from './UserContext';
 
 const Dashboard = () => {
-    const user = useUserContext(); // Get user data from context
+    const user = useUserContext(); // Destructure the user from context
 
     return (
         <div
@@ -24,8 +25,8 @@ const Dashboard = () => {
                 <Row className="text-center mb-5">
                     <Col>
                         <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginTop: 30 }}>
-                            Hello {user?.firstName || 'Passengers'}, Welcome to Your Dashboard!
-                        </h1> {/* Personalized greeting */}
+                            Hello {user?.firstName || 'Passenger'}, Welcome to Your Dashboard!
+                        </h1> {/* Personalized greeting with the user's name */}
                         <p style={{ fontSize: '1.25rem' }}>
                             Here you can manage your bus reservations easily.
                         </p>

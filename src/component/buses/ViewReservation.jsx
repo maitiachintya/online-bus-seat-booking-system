@@ -1,7 +1,6 @@
-// src/components/ViewReservations.js
-
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Table, Button, Modal, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import AxiosInstance from '../../api/AxiosInstance';
 import { API_ENDPOINTS } from '../../api/Url_Api';
 import { loadStripe } from '@stripe/stripe-js';
@@ -23,6 +22,8 @@ const ViewReservations = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [paymentModalShow, setPaymentModalShow] = useState(false);
     const [currentReservation, setCurrentReservation] = useState(null);
+
+    const navigate = useNavigate(); // Define navigate using useNavigate
 
     useEffect(() => {
         fetchReservations();
@@ -83,15 +84,15 @@ const ViewReservations = () => {
         }
     };
 
+    const handlePayment = (reservation) => {
+        setCurrentReservation(reservation);
+        setPaymentModalShow(true);
+    };
+
     const resetForm = () => {
         setNewReservation({ id: '', busNumber: '', route: '', bookingDate: '', seatsBooked: '', totalPrice: '' });
         setIsEditing(false);
         setShowModal(false);
-    };
-
-    const handlePayment = (reservation) => {
-        setCurrentReservation(reservation);
-        setPaymentModalShow(true);
     };
 
     const PaymentForm = () => {
@@ -204,6 +205,13 @@ const ViewReservations = () => {
                                         >
                                             Pay Now
                                         </Button>
+                                        <Button
+                                            variant="primary"
+                                            onClick={() => navigate(`/view-reservations/${reservation.id}`)}
+                                            style={{ marginRight: '10px' }}
+                                        >
+                                            View Details
+                                        </Button>
                                     </td>
                                 </tr>
                             ))}
@@ -278,13 +286,15 @@ const ViewReservations = () => {
                     <Button variant="secondary" onClick={resetForm}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={isEditing ? handleUpdateReservation : handleAddReservation}>
+                    <Button
+                        variant="primary"
+                        onClick={isEditing ? handleUpdateReservation : handleAddReservation}
+                    >
                         {isEditing ? 'Update Reservation' : 'Add Reservation'}
                     </Button>
                 </Modal.Footer>
             </Modal>
 
-            {/* Payment Modal */}
             <Modal show={paymentModalShow} onHide={() => setPaymentModalShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Payment</Modal.Title>

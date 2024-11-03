@@ -145,6 +145,27 @@
       "id": "bb2f",
       "email": "achintyamaiti20@gmail.com",
       "password": "Achintya@40"
+    },
+    {
+      "id": "9ec8",
+      "email": "achintyamaiti20@gmail.com",
+      "password": "Achintya@40"
+    },
+    {
+      "id": "e965",
+      "firstName": "Anima",
+      "lastName": " Maiti",
+      "email": "maitianima1234@gmail.com",
+      "password": "23456890",
+      "confirmPassword": "23456890"
+    },
+    {
+      "id": "a2c9",
+      "firstName": "Paresh",
+      "lastName": "Hazra",
+      "email": "phazra435@gmail.com",
+      "password": "34567810",
+      "confirmPassword": "34567810"
     }
   ],
   "bookings": [
@@ -245,6 +266,15 @@
       "bookingDate": "2025-12-13",
       "seatsBooked": "1",
       "totalPrice": "60",
+      "userId": 1
+    },
+    {
+      "id": "5aa8",
+      "busNumber": "215A",
+      "route": "Santragachi- New Town",
+      "bookingDate": "2024-12-12",
+      "seatsBooked": "10",
+      "totalPrice": "600",
       "userId": 1
     }
   ]

@@ -13,16 +13,14 @@ const Login = () => {
         password: '',
     });
     const [error, setError] = useState(null);
-    const [token, setToken] = useState(null);
-    const [loading, setLoading] = useState(false); // New loading state
-    const [registeredUsers, setRegisteredUsers] = useState([]); // State to hold registered users
+    const [loading, setLoading] = useState(false);
+    const [registeredUsers, setRegisteredUsers] = useState([]);
 
-    // Fetch registered users on component mount
     useEffect(() => {
         const fetchRegisteredUsers = async () => {
             try {
-                const response = await AxiosInstance.get(login_api); // Get registered users from your API
-                setRegisteredUsers(response.data); // Assuming response.data contains an array of users
+                const response = await AxiosInstance.get(login_api);
+                setRegisteredUsers(response.data);
             } catch (err) {
                 console.error('Failed to fetch registered users:', err);
             }
@@ -31,18 +29,16 @@ const Login = () => {
         fetchRegisteredUsers();
     }, [login_api]);
 
-    // Handle input change
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
         setError(null);
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
-        setLoading(true); // Set loading to true on submit
+        setLoading(true);
 
         // Check if the user is registered
         const registeredUser = registeredUsers.find(user => user.email === formData.email && user.password === formData.password);
@@ -52,39 +48,16 @@ const Login = () => {
             return;
         }
 
-        try {
-            const response = await AxiosInstance.post(login_api, formData);
-            console.log('Login response:', response);
+        // If user is found, navigate to dashboard with the user's name
+        navigate('/dashboard', { state: { userName: registeredUser.name } }); // Assuming `name` is a property of the user object
 
-            const receivedToken = response.data.token || response.data.id;
-
-            if (receivedToken) {
-                localStorage.setItem('token', receivedToken);
-                setToken(receivedToken);
-                alert('Login successful!');
-                navigate('/dashboard');
-            } else {
-                setError("Login failed. No token returned.");
-            }
-        } catch (err) {
-            console.error('Login error:', err);
-
-            if (err.response && err.response.status === 404) {
-                setError("Email has not been registered.");
-            } else if (err.response && err.response.data) {
-                setError(err.response.data.message || "Login failed. Please check your credentials.");
-            } else {
-                setError("Login failed. Please try again.");
-            }
-        } finally {
-            setLoading(false); // Reset loading state after try/catch
-        }
+        setLoading(false);
     };
 
     return (
         <div
             style={{
-                background: 'linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%)', // Bright background
+                background: 'linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%)',
                 minHeight: '100vh',
                 color: 'black',
                 padding: '50px 0',
@@ -99,7 +72,7 @@ const Login = () => {
                                 fontSize: '3rem',
                                 marginTop: 70,
                                 fontWeight: 'bold',
-                                color: '#4a4e69', // New bold color for text
+                                color: '#4a4e69',
                                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
                             }}
                         >
@@ -109,7 +82,7 @@ const Login = () => {
                             style={{
                                 fontSize: '1.25rem',
                                 fontWeight: '300',
-                                color: '#ff6b6b', // Brighter color
+                                color: '#ff6b6b',
                             }}
                         >
                             Please log in to your account.
@@ -162,7 +135,7 @@ const Login = () => {
                             <div style={{ textAlign: 'center', marginTop: '20px' }}>
                                 <Button
                                     type="submit"
-                                    disabled={loading} // Disable button when loading
+                                    disabled={loading}
                                     style={{
                                         backgroundColor: '#e43f5a',
                                         border: 'none',
@@ -175,7 +148,7 @@ const Login = () => {
                                         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
                                     }}
                                 >
-                                    {loading ? 'Logging in...' : 'Login'} {/* Change button text based on loading state */}
+                                    {loading ? 'Logging in...' : 'Login'}
                                 </Button>
                                 <p className="text-center mt-3">
                                     Don't have an account?{' '}

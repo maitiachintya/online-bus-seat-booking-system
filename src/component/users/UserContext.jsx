@@ -11,14 +11,14 @@ export const useUserContext = () => {
 
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    
+
     useEffect(() => {
         // Fetch user data from API using Axios
         axiosInstance.get('/users') // Adjust this path to your user API endpoint
             .then(response => setUser(response.data))
             .catch(error => console.error("Error fetching user data:", error));
     }, []);
-    
+
     return (
         <UserContext.Provider value={user}>
             {children}
